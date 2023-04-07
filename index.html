@@ -14,20 +14,90 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">HOME.</a></li>
+                <li><a href="#">SHOP.</a></li>
+                <li><a href="#">ABOUT.</a></li>
+                <li><a href="#">CONTACT.</a></li>
             </ul>
         </nav>
-        <button class="sign-in">SIGN UP</button>
+        <button class="dark">dark</button>
     </header>
 
     <main>
-        <h1>Live a <span class="white">new exper</span>ience</h1>
-        <p><span class="white">Beautiful artwork for everyday</span></p>
+        <h1 class="fore">Live a <span class="white">new exper</span>ience</h1>
+        <p class="para"><span class="white">Beautiful, decorative artwork for everyday</span></p>
         <button class="shop">SHOP</button>
     </main>
     
 </body>
+
+<script>
+    let btn = document.querySelector('.dark');
+    let secondBtn = document.querySelector('.shop');
+    let logo = document.querySelector('.logo');
+    let menus = document.querySelectorAll('a');
+    let fore = document.querySelector('.fore');
+    let para = document.querySelector('.para');
+    let body = document.querySelector('body');
+
+    
+    
+    btn.addEventListener('click', ()=> {
+        btn.classList.toggle('light');
+        if(btn.classList.contains('light')){
+        secondBtn.style.backgroundColor = 'white';
+        secondBtn.style.color = 'black';
+        btn.style.backgroundColor = 'white';
+        btn.style.color = 'black';
+        btn.textContent = 'white';
+        body.style.backgroundColor = 'black';
+        logo.style.color = 'white';
+        menus.forEach((menu) => {
+        menu.style.color = 'white';
+    })
+        fore.style.color = 'white';
+        para.style.color = 'white';
+
+        }else {
+        secondBtn.style.backgroundColor = 'black';
+        secondBtn.style.color = 'white';
+        btn.style.backgroundColor = 'black';
+        btn.style.color = 'white';
+        btn.textContent = 'dark';
+        body.style.backgroundColor = 'white';
+        logo.style.color = 'black';
+        menus.forEach((menu) => {
+        menu.style.color = 'black';
+    })
+        fore.style.color = 'black';
+        para.style.color = 'black';
+
+        }
+    });
+
+
+    function dark(){
+        secondBtn.style.backgroundColor = 'white';
+        secondBtn.style.color = 'black';
+        btn.style.backgroundColor = 'white';
+        btn.style.color = 'black';
+        body.style.backgroundColor = 'black';
+        logo.style.color = 'white';
+        menus.forEach((menu) => {
+        menu.style.color = 'white';
+    })
+        fore.style.color = 'white';
+        para.style.color = 'white';
+
+    }
+
+   /*  console.log(menus.forEach((menu) => {
+        console.log(menu);
+    })) */
+    //console.log(menus);
+   
+
+    
+
+</script>
 </html>

@@ -8,10 +8,11 @@
 body {
     height: 100vh;
     width: 100%;
-    background-image: url(Cool.jpg);
+    background-color: whitesmoke;
+    /* background-image: url(Cool.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 header {
@@ -25,16 +26,16 @@ header {
     font-weight: 600;
 }
 
-.gray {
+/* .gray {
     color: rgb(15, 15, 15);
-}
+} */
 
 nav ul {
     list-style-type: none;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
@@ -50,11 +51,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: black;
-    color: whitesmoke;
+    text-decoration: underline;
 }
 
-.sign-in {
+.dark {
     border: none;
     padding: 10px 20px;
     font-weight: 600;
@@ -64,7 +64,7 @@ nav ul li a:hover {
     transition: all 0.5s ease-in-out;
 }
 
-.sign-in:hover {
+.dark:hover {
     transform: scale(1.1);
 }
 
@@ -82,10 +82,10 @@ main p {
     font-size: 1.5rem;
 }
 
-.white {
+/* .white {
     color: whitesmoke;
 }
-
+ */
 main .shop {
     padding: 20px 60px;
     margin-top: 1em;
