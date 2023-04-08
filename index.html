@@ -91,6 +91,18 @@
 
     }
 
+    fore.addEventListener('mouseover', () => {
+        fore.classList.toggle('pink');
+        if(fore.classList.contains('pink')){
+            fore.style.color = 'pink';
+        }else if(btn.classList.contains('light')){
+            fore.style.color = 'white';
+        }else{
+            fore.style.color = 'black';
+        }
+        
+    })
+
    /*  console.log(menus.forEach((menu) => {
         console.log(menu);
     })) */
