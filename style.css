@@ -175,6 +175,10 @@ main .shop:hover {
         height: 10vh;
     }
 
+    header nav ul li {
+        display: inline-block;
+    }
+
     .resp {
         display: none;
     }
