@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page One</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/101e8a3de8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -20,15 +21,26 @@
                 <li><a href="#">CONTACT.</a></li>
             </ul>
         </nav>
-        <button class="dark">dark</button>
+        <div class="two-btns">
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
+            <button class="dark"><i class="fa-solid fa-moon"></i></button>
+        </div>
+        <div class="resp">
+                <ul class="ul">
+                    <li><a href="#" class="tag">HOME.</a></li>
+                    <li><a href="#" class="tag">SHOP.</a></li>
+                    <li><a href="#" class="tag">ABOUT.</a></li>
+                    <li><a href="#" class="tag">CONTACT.</a></li>
+                </ul>
+        </div>
     </header>
 
-    <main>
+<main>
         <h1 class="fore">Live a <span class="white">new exper</span>ience</h1>
         <p class="para"><span class="white">Beautiful, decorative artwork for everyday</span></p>
         <button class="shop">SHOP</button>
     </main>
-    
+ 
 </body>
 
 <script>
@@ -39,6 +51,24 @@
     let fore = document.querySelector('.fore');
     let para = document.querySelector('.para');
     let body = document.querySelector('body');
+    let menu = document.querySelector('.menu');
+    let resp = document.querySelector('.resp');
+    let ul = document.querySelector('.ul');
+    let aTags = document.querySelectorAll('.tag');
+
+
+    
+
+    menu.addEventListener('click', ()=>{
+        resp.classList.toggle('down');
+        if(resp.classList.contains('down')){
+        resp.style.display = 'block';
+    }else {
+        resp.style.display = 'none';
+    }
+    })
+
+   
 
     
     
@@ -47,28 +77,40 @@
         if(btn.classList.contains('light')){
         secondBtn.style.backgroundColor = 'white';
         secondBtn.style.color = 'black';
-        btn.style.backgroundColor = 'white';
-        btn.style.color = 'black';
-        btn.textContent = 'white';
+        menu.style.color = 'white';
+        btn.style.color = 'white';
+        btn.style.backgroundColor = 'black';
+        menu.style.backgroundColor = 'black';
+        btn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
         body.style.backgroundColor = 'black';
         logo.style.color = 'white';
         menus.forEach((menu) => {
         menu.style.color = 'white';
-    })
+    });
+        aTags.forEach((tag) => {
+        tag.style.color = 'black';
+    });
+        ul.style.backgroundColor = 'white';
         fore.style.color = 'white';
         para.style.color = 'white';
 
         }else {
         secondBtn.style.backgroundColor = 'black';
         secondBtn.style.color = 'white';
-        btn.style.backgroundColor = 'black';
-        btn.style.color = 'white';
-        btn.textContent = 'dark';
+        menu.style.color = 'black';
+        btn.style.color = 'black';
+        btn.style.backgroundColor = 'white';
+        menu.style.backgroundColor = 'white';
+        btn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
         body.style.backgroundColor = 'white';
         logo.style.color = 'black';
         menus.forEach((menu) => {
         menu.style.color = 'black';
-    })
+    });
+        aTags.forEach((tag) => {
+        tag.style.color = 'white';
+    });
+        ul.style.backgroundColor = 'black';
         fore.style.color = 'black';
         para.style.color = 'black';
 
@@ -76,7 +118,7 @@
     });
 
 
-    function dark(){
+    /* function dark(){
         secondBtn.style.backgroundColor = 'white';
         secondBtn.style.color = 'black';
         btn.style.backgroundColor = 'white';
@@ -89,7 +131,7 @@
         fore.style.color = 'white';
         para.style.color = 'white';
 
-    }
+    } */
 
     fore.addEventListener('mouseover', () => {
         fore.classList.toggle('pink');

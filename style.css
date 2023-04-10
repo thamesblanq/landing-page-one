@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -17,9 +20,10 @@ body {
 
 header {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
     height: 10vh;
+    position: relative;
 }
 
 .logo h4 {
@@ -30,15 +34,15 @@ header {
     color: rgb(15, 15, 15);
 } */
 
-nav ul {
+header nav ul {
     list-style-type: none;
 }
 
-nav ul li {
-    display: inline-block;
+header nav ul li {
+    display: none;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     margin: 0 0.5em;
     font-weight: 600;
@@ -50,23 +54,79 @@ nav ul li a {
     transition: all 0.5s ease-in-out;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
+
+.menu {
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: black;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu:hover {
+    transform: translateY(-5%);
+}
+ 
+
 
 .dark {
     border: none;
     padding: 10px 20px;
     font-weight: 600;
-    color: whitesmoke;
-    background-color: black;
+    font-size: 1rem;
+    color: black;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 
 .dark:hover {
-    transform: scale(1.1);
+    transform: translateY(-5%);
 }
+
+header .resp {
+    display: none;
+    position: absolute;
+    top: 3.5em;
+    right: 1em;
+}
+
+header .resp ul {
+    width: 40vw;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/* header .resp ul .down {
+    display: block;
+} */
+
+header .resp ul li {
+    list-style-type: none;
+}
+
+header .resp ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 3em 0.5em;
+    font-size: 0.7rem;
+    transition: all 0.5s ease-in-out;
+}
+
+header .resp ul li a:hover, header .resp ul li a:focus {
+    text-decoration: underline;
+}
+
+
 
 main {
     text-align: center;
@@ -78,12 +138,13 @@ main {
 }
 
 main h1 {
-    font-size: 5rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 main p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 /* .white {
@@ -93,8 +154,7 @@ main p {
 main .shop {
     padding: 20px 60px;
     margin-top: 1em;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1rem;
     border: none;
     background-color: black;
     color: whitesmoke;
@@ -104,4 +164,37 @@ main .shop {
 
 main .shop:hover {
     transform: translateY(15%);
+}
+
+@media screen and (min-width: 769px){
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .resp {
+        display: none;
+    }
+
+
+    main h1 {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    main .shop {
+        padding: 20px 60px;
+        font-size: 1.5rem;
+    }
 }
