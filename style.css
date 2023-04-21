@@ -11,19 +11,21 @@
 body {
     height: 100vh;
     width: 100%;
-    background-color: whitesmoke;
-    /* background-image: url(Cool.jpg);
+   /*  background-color: whitesmoke; */
+    background-image: url(accordion.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover; 
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 2em;
     height: 10vh;
     position: relative;
+    background-color: azure;
 }
 
 .logo h4 {
@@ -58,24 +60,25 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 .menu {
     border: none;
-    padding: 10px 20px;
+    padding: 0.5em;
     font-weight: 600;
     font-size: 1rem;
+    background-color: azure;
     color: black;
-    margin-right: 0.5em;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
-
+/* 
 .menu:hover {
-    transform: translateY(-5%);
-}
+    transform: scale(1.1);
+} */
  
 
-
+/* 
 .dark {
     border: none;
     padding: 10px 20px;
@@ -90,16 +93,33 @@ header nav ul li a:hover {
 .dark:hover {
     transform: translateY(-5%);
 }
-
+ */
 header .resp {
     display: none;
     position: absolute;
     top: 3.5em;
-    right: 1em;
+    right: 0;
+    transform: translateY(20%);
+    animation-name: up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes up {
+    50%{
+        transform: translateY(10%);
+    }
+    75%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 header .resp ul {
-    width: 40vw;
+    width: 100vw;
     background-color: black;
     color: whitesmoke;
     padding: 0.5em;
@@ -112,6 +132,7 @@ header .resp ul {
 
 header .resp ul li {
     list-style-type: none;
+    margin: 1em;
 }
 
 header .resp ul li a {
@@ -140,11 +161,13 @@ main {
 main h1 {
     font-size: 3rem;
     font-weight: 900;
+    color: whitesmoke;
 }
 
 main p {
     font-size: 1rem;
     font-weight: 500;
+    color: whitesmoke;
 }
 
 /* .white {
@@ -156,8 +179,8 @@ main .shop {
     margin-top: 1em;
     font-size: 1rem;
     border: none;
-    background-color: black;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: black;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }

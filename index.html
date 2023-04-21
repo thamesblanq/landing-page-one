@@ -23,7 +23,7 @@
         </nav>
         <div class="two-btns">
             <button class="menu"><i class="fa-solid fa-bars"></i></button>
-            <button class="dark"><i class="fa-solid fa-moon"></i></button>
+            <!-- <button class="dark"><i class="fa-solid fa-moon"></i></button> -->
         </div>
         <div class="resp">
                 <ul class="ul">
@@ -55,6 +55,7 @@
     let resp = document.querySelector('.resp');
     let ul = document.querySelector('.ul');
     let aTags = document.querySelectorAll('.tag');
+    let btnMenu = document.querySelector('.menu');
 
 
     
@@ -68,6 +69,14 @@
     }
     })
 
+    btnMenu.addEventListener('click', ()=>{
+        btnMenu.classList.toggle('light');
+        if(btnMenu.classList.contains('light')){
+            btnMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+        }else{
+            btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+        }
+    })
    
 
     
@@ -133,7 +142,7 @@
 
     } */
 
-    fore.addEventListener('mouseover', () => {
+  /*   fore.addEventListener('mouseover', () => {
         fore.classList.toggle('pink');
         if(fore.classList.contains('pink')){
             fore.style.color = 'pink';
@@ -144,7 +153,7 @@
         }
         
     })
-
+ */
    /*  console.log(menus.forEach((menu) => {
         console.log(menu);
     })) */
